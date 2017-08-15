@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="col-md-6 col-md-setoff-3">
+    <div class="row">
+      <%= link_to "Add an article", new_article_path %>
+    </div>
+
+    <div class="row">
+      <% @articles.each do |article| %>
+      <h2><%= article.title %></h2>
+      <p><%= article.content %></p>
+      <%= link_to "Delete", article_path(article),
+      method: :delete %>
+      <div class="btn btn-primary">
+        <%= link_to "Edit", edit_article_path(article) %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
