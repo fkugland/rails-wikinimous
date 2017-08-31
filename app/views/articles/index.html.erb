@@ -1,19 +1,17 @@
 <div class="container">
-  <div class="col-md-6 col-md-setoff-3">
-    <div class="row">
-      <%= link_to "Add an article", new_article_path %>
-    </div>
 
-    <div class="row">
-      <% @articles.each do |article| %>
-      <h2><%= article.title %></h2>
-      <p><%= article.content %></p>
-      <%= link_to "Delete", article_path(article),
-      method: :delete %>
-      <div class="btn btn-primary">
-        <%= link_to "Edit", edit_article_path(article) %>
-      </div>
-      <% end %>
-    </div>
+  <h1><%= "Welcome to Wikinimous" %></h1>
+  <%= link_to "Add an article", new_article_path, class: "btn btn-primary custom-buttons" %>
+
+  <% @articles.each do |article| %>
+  <div class="card">
+    <h2><%= article.title %></h2>
+    <p><%= article.content %></p>
+    <%= link_to "Delete", article_path(article),
+    method: :delete, class: "btn btn-danger custom-buttons" %>
+    <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary custom-buttons" %>
+    <%= link_to "Read More", article_path(article), class: "btn btn-primary custom-buttons" %>
   </div>
+  <% end %>
 </div>
+

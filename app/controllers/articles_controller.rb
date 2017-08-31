@@ -22,12 +22,14 @@ class ArticlesController < ApplicationController
 
   def update        # PATCH /restaurants/:id
     @article = Article.find(params[:id])
-    @article.update(params(article_params))
+    @article.update(article_params)
+    redirect_to articles_path
   end
 
   def destroy       # DELETE /restaurants/:id
     @article = Article.find(params[:id])
     @article.destroy
+    redirect_to articles_path
   end
 
   def article_params

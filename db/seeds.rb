@@ -7,5 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-(10).times{ Article.create( title: Faker::DrWho.quote, content: Faker::Lorem.sentences(30) )}
-
+(10).times do
+  Article.create(
+    title: Faker::HarryPotter.quote,
+    content: Faker::Lorem.paragraph
+    )
+end

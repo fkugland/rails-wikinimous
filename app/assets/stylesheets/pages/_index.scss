@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // margin-left: 200px;
+  // margin-right: 200px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px gray;
+  text-align: center;
+  padding: 100px;
+  background-color: white;
+}
+
+body {
+  background-color: #011936;
+}
+
+.custom-buttons {
+  width: 150px;
+}
+
+.card {
+  text-align: left;
+  margin: 20px 0px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 30px;
+}

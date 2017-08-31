@@ -1,7 +1,12 @@
-<%= form_for(@article) do |a| %>
-  <%= a.label :title %>
-  <%= a.text_field :title %>
-  <%= a.label :content %>
-  <%= a.text_field :content %>
-  <%= a.submit %>
-<% end %>
+<div class="container form-container">
+  <h2><%= "Please fill out the form!" %></h2>
+    <%= form_for(@article) do |t| %>
+      <div class="form">
+      <%= t.label :title, class: "form-lable" %>
+      <%= t.text_field :title, class: "form-control" %>
+      <%= t.label :content, class: "form-lable" %>
+      <%= t.text_field :content, class: "form-control" %>
+      </div>
+      <%= t.submit "Submit", class: "btn btn-primary form-btn"%>
+    <% end %>
+</div>
